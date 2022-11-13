@@ -47,11 +47,19 @@ If there are existing files in your repository that you'd like to use {% data va
     - Including the *.gitattributes* file in the repository allows {% data variables.large_files.product_name_short %} objects to optionally be included in ZIP file and tarball archives.
 
   {% endnote %}
-
+ 
+ 
 4. Add a file to the repository matching the extension you've associated:
   ```shell
   $ git add path/to/file.psd
   ```
+  
+   {% note %}
+
+  **Note:** If you already have added a large file before installing lfs you would actually need to readd it again.
+
+  {% endnote %}
+  
 5. Commit the file and push it to {% data variables.product.product_name %}:
   ```shell
   $ git commit -m "add file.psd"
